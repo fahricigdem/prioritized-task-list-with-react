@@ -1,4 +1,5 @@
 import './App.css';
+import NewTask from './components/NewTask'
 
 function App() {
   return (
@@ -30,6 +31,8 @@ function App() {
           <h4><span className="badge rounded-pill bg-secondary">0</span></h4>
         </div>
       </div>
+
+
     </div>
   );
 }

@@ -5,9 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+//components
+import NewTask from './components/NewTask'
+
+
+
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <NewTask />
   </React.StrictMode>,
   document.getElementById('root')
 );
