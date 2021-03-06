@@ -1,19 +1,4 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -24,15 +9,59 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.TaskGroupRow{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.TaskGroup{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: solid white 5px;
+  height: 40vh;
+  width: 40vW;
+  margin: 0px 20px;
+  
   }
-  to {
-    transform: rotate(360deg);
+
+  .UrgentImp{
+
+    background-color: #99CC00;
+    border-radius: 5% 0% 30% 0%;
   }
-}
+
+  .notUrgentImp{
+    
+    background-color: #36A4DD;
+    border-radius: 0% 5% 0% 30%;
+  }
+
+  .UrgentNotImp{
+
+    background-color: #FF9F00;
+    border-radius: 0% 30% 0% 5%;
+  }
+
+  .notUrgentNotImp{
+    
+    background-color: #FF4D4E;
+    border-radius: 30% 0% 5% 0%;
+  }
+
+  .AddHome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: red;
+    height: 15vh;
+    width: 15vw;
+    border-radius: 50% 50% 50% 50%;
+  }
+
