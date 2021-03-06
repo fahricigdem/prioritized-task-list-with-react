@@ -6,14 +6,14 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 //components
-import NewTask from './components/NewTask'
+import TaskList from './components/TaskList'
 
 
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <NewTask />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

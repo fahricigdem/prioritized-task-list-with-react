@@ -1,5 +1,6 @@
-.App {
+.HomePage {
   min-height: 100vh;
+  background-color: rgb(226, 219, 219);
 
   display: flex;
   flex-direction: column;
@@ -41,6 +42,7 @@
 
     background-color: #99CC00;
     border-radius: 5% 0% 30% 0%;
+    padding: 7vw;
     transition: all 0.1s ease-in-out;
     box-shadow: -6px -6px 12px #12abda5d,
     9px 9px 15px #dbdfcf4d;
@@ -135,6 +137,7 @@
     justify-content: center;
 
     background-color: red;
+    color: blue;
     height: 10vh;
     width: 20vw;
     border-radius: 50% 50% 50% 50%;

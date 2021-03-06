@@ -19,6 +19,7 @@
  /* ---------------------input text starts-------------------------------- */
 .newTaskInput{
     padding: 8px;
+    width: 80vw;
 }
 
 .newTaskInput:hover{
@@ -54,6 +55,7 @@ input[type="checkbox"]:checked + label span {
 
 .newTaskDetail{
     padding: 8px;
+    width: 80vw;
 }
 
 .newTaskDetail:hover{

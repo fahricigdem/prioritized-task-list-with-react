@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import './NewTask.css';
 
 
@@ -35,7 +35,7 @@ const NewTask = () => {
                 // onChange={onChange}
                 /> <label for="c2"><span></span>Important</label>
 
-                {/* <textarea
+                <textarea
                     className="newTaskDetail"
                     name="newTaskDetail"
                     id="taskDetail"
@@ -44,7 +44,7 @@ const NewTask = () => {
                     rows="4"
                     placeholder="New Task Detail"
                 // onChange={onChange}
-                /> */}
+                />
                 <br />
                 <button className="btn btn-danger">Add</button>
 

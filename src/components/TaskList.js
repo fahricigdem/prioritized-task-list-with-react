@@ -1,7 +1,12 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './TaskList.css';
+import TaskGeneration from './TaskGeneration'
+import { TaskContext } from './TaskContext'
 
-const TaskList = () => {
+
+const TaskList = ({ match }) => {
+    const [tasks, setTasks] = useContext(TaskContext)
+
     return (
         <div className="container">
 
@@ -11,15 +16,7 @@ const TaskList = () => {
                 <span onclick="newElement()" class="addBtn">Add</span>
             </div>
 
-            <ul id="myUL">
-                <li>Hit the gym</li>
-                <li className="checked">Pay bills</li>
-                <li>Meet George</li>
-                <li>Buy eggs</li>
-                <li>Read a book</li>
-                <li>Organize office</li>
-            </ul>
-
+            <TaskGeneration cat={Number(match.params.cat)} />
 
         </div>
     )
