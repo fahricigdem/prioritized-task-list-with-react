@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/prioritized-task-list-with-react/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/prioritized-task-list-with-react/static/js/main.64598e25.chunk.js",
+    "main.js.map": "/prioritized-task-list-with-react/static/js/main.64598e25.chunk.js.map",
+    "runtime-main.js": "/prioritized-task-list-with-react/static/js/runtime-main.231b99ae.js",
+    "runtime-main.js.map": "/prioritized-task-list-with-react/static/js/runtime-main.231b99ae.js.map",
+    "static/js/2.a21f7c66.chunk.js": "/prioritized-task-list-with-react/static/js/2.a21f7c66.chunk.js",
+    "static/js/2.a21f7c66.chunk.js.map": "/prioritized-task-list-with-react/static/js/2.a21f7c66.chunk.js.map",
+    "static/js/3.22c76e2a.chunk.js": "/prioritized-task-list-with-react/static/js/3.22c76e2a.chunk.js",
+    "static/js/3.22c76e2a.chunk.js.map": "/prioritized-task-list-with-react/static/js/3.22c76e2a.chunk.js.map",
+    "index.html": "/prioritized-task-list-with-react/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/prioritized-task-list-with-react/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.a21f7c66.chunk.js.LICENSE.txt": "/prioritized-task-list-with-react/static/js/2.a21f7c66.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/prioritized-task-list-with-react/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.231b99ae.js",
+    "static/js/2.a21f7c66.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.64598e25.chunk.js"
+  ]
+}
