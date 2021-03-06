@@ -10,7 +10,7 @@ function App() {
           Prioritized Task List
         </p>
 
-        <code>Under Construction!</code>
+        <code style={{ color: "red" }}>Under Construction!</code>
 
       </header>
     </div>
