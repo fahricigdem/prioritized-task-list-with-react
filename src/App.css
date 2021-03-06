@@ -29,6 +29,10 @@
   
   }
 
+  .TaskGroup h5{
+    font-size: 5vw;
+  }
+
   .UrgentImp{
 
     background-color: #99CC00;
