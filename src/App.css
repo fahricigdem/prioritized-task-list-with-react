@@ -23,7 +23,7 @@
   align-items: center;
   justify-content: center;
 
-  border: solid white 5px;
+  border: solid white 1px;
   height: 30vh;
   width: 40vW;
   margin: 0px 20px;
@@ -34,30 +34,99 @@
     font-size: 5vw;
   }
 
+/* ---------------------------------------------------- */
+
   .UrgentImp{
 
     background-color: #99CC00;
     border-radius: 5% 0% 30% 0%;
+    transition: all 0.1s ease-in-out;
+    box-shadow: -6px -6px 12px #12abda5d,
+    9px 9px 15px #dbdfcf4d;
+  
   }
 
+  .UrgentImp:hover {
+    opacity: 0.6;
+    box-shadow: -6px -6px 10px #00cc3d5d,
+      6px 6px 10px #dbdfcf88;
+  }
+
+  .UrgentImp:active {
+    opacity: 1;
+    box-shadow: inset -8px -8px 16px rgba(255, 255, 255, 0.5),
+      inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+    color: #cce379;
+  }
+  
+/* ---------------------------------------------------- */
   .notUrgentImp{
     
     background-color: #36A4DD;
     border-radius: 0% 5% 0% 30%;
+    transition: all 0.1s ease-in-out;
+    box-shadow: -6px -6px 12px #12abda5d,
+    9px 9px 15px #dbdfcf4d;
   }
 
+  .notUrgentImp:hover {
+    opacity: 0.6;
+    box-shadow: -6px -6px 10px #36A4DD,
+      6px 6px 10px #dbdfcf88;
+  }
+
+  .notUrgentImp:active {
+    opacity: 1;
+    box-shadow: inset -8px -8px 16px rgba(255, 255, 255, 0.5),
+      inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+    color: #bedff0;
+  }
+
+/* ---------------------------------------------------- */
   .UrgentNotImp{
 
     background-color: #FF9F00;
     border-radius: 0% 30% 0% 5%;
+    transition: all 0.1s ease-in-out;
+    box-shadow: -6px -6px 12px #12abda5d,
+    9px 9px 15px #dbdfcf4d;
   }
 
+  .UrgentNotImp:hover {
+    opacity: 0.6;
+    box-shadow: -6px -6px 10px #00cc3d5d,
+      6px 6px 10px #dbdfcf88;
+  }
+
+  .UrgentNotImp:active {
+    opacity: 1;
+    box-shadow: inset -8px -8px 16px rgba(255, 255, 255, 0.5),
+      inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+    color: #d49125dc;
+  }
+/* ---------------------------------------------------- */
   .notUrgentNotImp{
     
     background-color: #FF4D4E;
     border-radius: 30% 0% 5% 0%;
+    transition: all 0.1s ease-in-out;
+    box-shadow: -6px -6px 12px #12abda5d,
+    9px 9px 15px #dbdfcf4d;
   }
 
+  .notUrgentNotImp:hover {
+    opacity: 0.6;
+    box-shadow: -6px -6px 10px #00cc3d5d,
+      6px 6px 10px #dbdfcf88;
+  }
+
+  .notUrgentNotImp:active {
+    opacity: 1;
+    box-shadow: inset -8px -8px 16px rgba(255, 255, 255, 0.5),
+      inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+    color: #ad4f4fa4;
+  }
+/* ---------------------------------------------------- */
   .AddHome{
     display: flex;
     flex-direction: column;
@@ -65,8 +134,26 @@
     justify-content: center;
 
     background-color: red;
-    height: 15vh;
-    width: 15vw;
+    height: 10vh;
+    width: 20vw;
     border-radius: 50% 50% 50% 50%;
+    border: solid white 1px;
+
+    transition: all 0.1s ease-in-out;
+    box-shadow: -6px -6px 12px #12abda5d,
+    9px 9px 15px #dbdfcf4d;
   }
 
+  .AddHome:hover{
+    opacity: 0.6;
+    box-shadow: -6px -6px 10px #00cc3d5d,
+      6px 6px 10px #dbdfcf88;
+  }
+
+  .AddHome:active {
+    opacity: 1;
+    box-shadow: inset -8px -8px 16px rgba(255, 255, 255, 0.5),
+      inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+    color: #cce379;
+  }
+/* ---------------------------------------------------- */
