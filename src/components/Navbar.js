@@ -29,8 +29,12 @@ const Navbar = () => {
                 <h1 className="btn btn-info">Home</h1>
             </Link>
 
+            <Link to="/prioritized-task-list-with-react/5" style={{ textDecoration: 'none' }} >
+                <div className="badge badge-warning">Total Tasks: {tasks.length}</div>
+            </Link>
 
-            <div className="badge badge-warning">Total Tasks: {tasks.length}</div>
+            {/* <div className="badge badge-warning">Total Tasks: {tasks.length}</div> */}
+
             <div className="badge badge-danger">Total Done: {completed} </div>
 
         </nav>

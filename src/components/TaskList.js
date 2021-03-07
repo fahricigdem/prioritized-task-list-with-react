@@ -30,15 +30,16 @@ const TaskList = ({ match }) => {
     return (
         <div className="taskListContainer">
 
-            <div>
 
-                {categorie == 1 ? <p style={style}>Urgent & Important</p> :
-                    categorie == 2 ? <p style={style}>Important</p> :
-                        categorie == 3 ? <p style={style}>Urgent</p> : <p style={style}>others</p>}
 
-                <TaskGeneration cat={categorie} />
+            {categorie == 1 ? <p style={style}>Urgent & Important</p> :
+                categorie == 2 ? <p style={style}>Important</p> :
+                    categorie == 3 ? <p style={style}>Urgent</p> :
+                        categorie == 4 ? <p style={style}>Others</p> : <p style={style}>All Tasks</p>}
 
-            </div>
+            <TaskGeneration cat={categorie} />
+
+
             <div className="buttonContainer">
 
                 <Link to="/prioritized-task-list-with-react/new-task" style={{ textDecoration: 'none', color: "whitesmoke" }}>

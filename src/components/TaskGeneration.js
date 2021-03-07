@@ -33,7 +33,7 @@ const TaskGeneration = ({ cat }) => {
 
     const data = tasks.map(task => {
 
-        if (task.categorie === cat) {
+        if (task.categorie === cat || cat == 5) {
             let style
             style = task.completed && "checked"
 
@@ -48,7 +48,7 @@ const TaskGeneration = ({ cat }) => {
                         {task.title} {task.id}
                     </li>
 
-                    <p onClick={() => handleDelete(task.id)} className="formButton" style={{ minWidth: "3vw", padding: '1vw', backgroundColor: "#ec5858" }} > &#9932;  </p>
+                    <p onClick={() => handleDelete(task.id)} className="formButton" style={{ minWidth: "3vw", padding: '1vw', backgroundColor: "#ec5858", color: "whitesmoke" }} > &#9932;  </p>
 
                 </div>
             )
