@@ -62,9 +62,14 @@ input[type="checkbox"]:checked + label span {
     border-bottom: solid .5vh rgb(202, 15, 15);
 }
 
-button{
+#add {
 
     min-width: 30vw;
+    min-height: 10vh;
+}
+
+#end {
+    min-width: 20vw;
     min-height: 10vh;
 }
 

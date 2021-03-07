@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 // npm install react-router-dom
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';

@@ -1,5 +1,5 @@
 .HomePage {
-  min-height: 100vh;
+  min-height: 90vh;
   background-color: rgb(226, 219, 219);
 
   display: flex;
@@ -29,6 +29,7 @@
   height: 30vh;
   width: 40vW;
   margin: 0px 20px;
+  padding: 8vw;
   
   }
 
@@ -42,7 +43,6 @@
 
     background-color: #99CC00;
     border-radius: 5% 0% 30% 0%;
-    padding: 7vw;
     transition: all 0.1s ease-in-out;
     box-shadow: -6px -6px 12px #12abda5d,
     9px 9px 15px #dbdfcf4d;

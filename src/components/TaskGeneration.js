@@ -3,7 +3,8 @@ import { TaskContext } from './TaskContext'
 
 const TaskGeneration = ({ cat }) => {
 
-    const [tasks, setTasks] = useContext(TaskContext)
+    const { value1, value2 } = React.useContext(TaskContext);
+    const [tasks, setTasks] = value1
 
     const data = tasks.map(task => {
 
@@ -11,7 +12,7 @@ const TaskGeneration = ({ cat }) => {
 
             return (
 
-                <li key={task.id}>{task.title}</li>
+                <li key={task.id}>{task.title} {task.id}</li>
             )
         }
     }

@@ -1,21 +1,20 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React from 'react';
 import './TaskList.css';
 import TaskGeneration from './TaskGeneration'
 import { TaskContext } from './TaskContext'
+import { Link } from 'react-router-dom'
 
 
 const TaskList = ({ match }) => {
-    const [tasks, setTasks] = useContext(TaskContext)
+
+    const { value1, value2 } = React.useContext(TaskContext);
+    const [tasks, setTasks] = value1
 
     return (
         <div className="container">
-
-            <div id="myDIV" class="header">
-                <h2>Task List</h2>
-                <input type="text" id="myInput" placeholder="Title..." />
-                <span onclick="newElement()" class="addBtn">Add</span>
-            </div>
-
+            <Link to="/prioritized-task-list-with-react/new-task" style={{ textDecoration: 'none', color: "whitesmoke" }}>
+                <button className="btn btn-danger">Add New</button>
+            </Link>
             <TaskGeneration cat={Number(match.params.cat)} />
 
         </div>
