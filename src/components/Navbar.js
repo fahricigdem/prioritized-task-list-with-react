@@ -30,12 +30,12 @@ const Navbar = () => {
             </Link>
 
             <Link to="/prioritized-task-list-with-react/5" style={{ textDecoration: 'none' }} >
-                <div className="badge badge-warning">Total Tasks: {tasks.length}</div>
+                <div className="badge badge-warning">All : {tasks.length}</div>
             </Link>
 
             {/* <div className="badge badge-warning">Total Tasks: {tasks.length}</div> */}
 
-            <div className="badge badge-danger">Total Done: {completed} </div>
+            <div className="badge badge-danger">Done : {completed} </div>
 
         </nav>
     )
