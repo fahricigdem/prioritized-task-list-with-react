@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/prioritized-task-list-with-react/static/css/main.c2421413.chunk.css",
-    "main.js": "/prioritized-task-list-with-react/static/js/main.d02ae2c2.chunk.js",
-    "main.js.map": "/prioritized-task-list-with-react/static/js/main.d02ae2c2.chunk.js.map",
+    "main.css": "/prioritized-task-list-with-react/static/css/main.fbdf8a44.chunk.css",
+    "main.js": "/prioritized-task-list-with-react/static/js/main.555b3537.chunk.js",
+    "main.js.map": "/prioritized-task-list-with-react/static/js/main.555b3537.chunk.js.map",
     "runtime-main.js": "/prioritized-task-list-with-react/static/js/runtime-main.59bccee2.js",
     "runtime-main.js.map": "/prioritized-task-list-with-react/static/js/runtime-main.59bccee2.js.map",
     "static/css/2.fabbef47.chunk.css": "/prioritized-task-list-with-react/static/css/2.fabbef47.chunk.css",
-    "static/js/2.e2869c47.chunk.js": "/prioritized-task-list-with-react/static/js/2.e2869c47.chunk.js",
-    "static/js/2.e2869c47.chunk.js.map": "/prioritized-task-list-with-react/static/js/2.e2869c47.chunk.js.map",
+    "static/js/2.a6c285ab.chunk.js": "/prioritized-task-list-with-react/static/js/2.a6c285ab.chunk.js",
+    "static/js/2.a6c285ab.chunk.js.map": "/prioritized-task-list-with-react/static/js/2.a6c285ab.chunk.js.map",
     "static/js/3.a8280468.chunk.js": "/prioritized-task-list-with-react/static/js/3.a8280468.chunk.js",
     "static/js/3.a8280468.chunk.js.map": "/prioritized-task-list-with-react/static/js/3.a8280468.chunk.js.map",
     "index.html": "/prioritized-task-list-with-react/index.html",
     "static/css/2.fabbef47.chunk.css.map": "/prioritized-task-list-with-react/static/css/2.fabbef47.chunk.css.map",
-    "static/css/main.c2421413.chunk.css.map": "/prioritized-task-list-with-react/static/css/main.c2421413.chunk.css.map",
-    "static/js/2.e2869c47.chunk.js.LICENSE.txt": "/prioritized-task-list-with-react/static/js/2.e2869c47.chunk.js.LICENSE.txt"
+    "static/css/main.fbdf8a44.chunk.css.map": "/prioritized-task-list-with-react/static/css/main.fbdf8a44.chunk.css.map",
+    "static/js/2.a6c285ab.chunk.js.LICENSE.txt": "/prioritized-task-list-with-react/static/js/2.a6c285ab.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.59bccee2.js",
     "static/css/2.fabbef47.chunk.css",
-    "static/js/2.e2869c47.chunk.js",
-    "static/css/main.c2421413.chunk.css",
-    "static/js/main.d02ae2c2.chunk.js"
+    "static/js/2.a6c285ab.chunk.js",
+    "static/css/main.fbdf8a44.chunk.css",
+    "static/js/main.555b3537.chunk.js"
   ]
 }
