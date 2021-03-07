@@ -1,11 +1,14 @@
-.container{
+.taskListContainer{
   /* text-align: center; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: #555;
-  min-width: 100vw
+  /* min-width: 100vw; */
+  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+
 }
 
 .taskrow{
@@ -15,59 +18,30 @@
   border: solid white 1px;
 }
 
-.deleteTask{
-  background-color: #ec4646 ;
-  padding: 9px 1vw; 
-  margin: 0;
-  width: 11vw;
-  cursor: pointer;
-}
-
-.deleteTask:hover{
-  background-color: #d45e5e ;
-  padding: 9px 1vw; 
-  margin: 0;
-  width: 11vw;
-  cursor: pointer;
-}
-
-.categorieLinks{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-}
-
 /* Remove margins and padding from the list */
   ul {
     margin: 0;
     padding: 0;
     text-align: left;
+    min-height: 45vh;
   }
   
   /* Style the list items */
   ul li {
     cursor: pointer;
     list-style: none;
+    display:inline-block;
     position: relative;
-    padding: 1vh 1vw 1vh 2vw;
+    padding: 1vh 1vw 0.4vh 4vw;
     background: #eee;
-    font-size: 18px;
     transition: 0.2s;
-    width: 75vw;
+    width: 70vw;
   
     /* make the list items unselectable */
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
-  
-  /* Set all odd list items to a different color (zebra-stripes) */
-  ul li:nth-child(odd) {
-    background: #f9f9f9;
   }
   
   /* Darker background-color on hover */
@@ -90,65 +64,49 @@
     border-style: solid;
     border-width: 0 2px 2px 0;
     top: 10px;
-    left: 16px;
+    left: 1vw;
     transform: rotate(45deg);
     height: 15px;
     width: 1vw;
   }
   
-  /* Style the close button */
-  .close {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 12px 16px 12px 16px;
+
+    /* ------------------buttons starts-------------------------------- */
+
+    .formButton {
+      background-color: rgba(245, 245, 245, 0.897); 
+      border: none;
+      color:black;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin: 4px 2px;
+      cursor: pointer;
+      min-width: 40vw
+    }
+  
+    .formButton:hover{
+      border-left: solid .5vh yellow;
+  }
+    
+    .link {
+      padding: 15px; 
+      width: 20vh; 
+      font-size: calc(3px + 2vmin); 
+      color: whitesmoke;
   }
   
-  .close:hover {
-    background-color: #f44336;
-    color: white;
-  }
-  
-  /* Style the header */
-  .header {
-    background-color: #435560;
-    padding: 30px 40px;
-    color: white;
-    text-align: center;
-  }
-  
-  /* Clear floats after the header */
-  .header:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Style the input */
-  input {
-    margin: 0;
-    border: none;
-    border-radius: 0;
-    width: 75%;
-    padding: 10px;
-    float: left;
-    font-size: 16px;
-  }
-  
-  /* Style the "Add" button */
-  .addBtn {
-    padding: 10px;
-    width: 25%;
-    background: #d9d9d9;
-    color: #555;
-    float: left;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-    border-radius: 0;
-  }
-  
-  .addBtn:hover {
-    background-color: #bbb;
-  }
+   /* ------------------buttons ends-------------------------------- */
+   .buttonContainer{
+    justify-self: flex-end;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    
+    
+   }

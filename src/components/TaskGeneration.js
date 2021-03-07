@@ -48,7 +48,7 @@ const TaskGeneration = ({ cat }) => {
                         {task.title} {task.id}
                     </li>
 
-                    <h5 onClick={() => handleDelete(task.id)} className="deleteTask" >D E L E T E</h5>
+                    <p onClick={() => handleDelete(task.id)} className="formButton" style={{ minWidth: "3vw", padding: '1vw', backgroundColor: "#ec5858" }} > &#9932;  </p>
 
                 </div>
             )

@@ -25,39 +25,46 @@ const TaskList = ({ match }) => {
         return (task)
     })
 
+    let style = { color: "#d8c292", fontSize: "calc(15px + 2vmin)" }
+
     return (
-        <div className="container">
+        <div className="taskListContainer">
 
+            <div>
 
+                {categorie == 1 ? <p style={style}>Urgent & Important</p> :
+                    categorie == 2 ? <p style={style}>Important</p> :
+                        categorie == 3 ? <p style={style}>Urgent</p> : <p style={style}>others</p>}
 
-            {categorie == 1 ? <h1 style={{ color: "#d8c292" }}>Urgent & Important</h1> :
-                categorie == 2 ? <h1 style={{ color: "#d8c292" }}>Important</h1> :
-                    categorie == 3 ? <h1 style={{ color: "#d8c292" }}>Urgent</h1> : <h1 style={{ color: "#d8c292" }}>others</h1>}
+                <TaskGeneration cat={categorie} />
 
+            </div>
+            <div className="buttonContainer">
 
-            <TaskGeneration cat={categorie} />
-            <br />
-            <Link to="/prioritized-task-list-with-react/new-task" style={{ textDecoration: 'none', color: "whitesmoke" }}>
-                <button className="btn btn-danger">Add New</button>
-            </Link>
-            <br />
-            <Link to="/prioritized-task-list-with-react/" style={{ textDecoration: 'none', color: "whitesmoke" }}>
-                <h1 className="btn btn-info">Home</h1>
-            </Link>
-
-            <div className="categorieLinks">
-                <Link to="/prioritized-task-list-with-react/1" style={{ textDecoration: 'none', color: "whitesmoke" }} >
-                    <h5 style={{ backgroundColor: "#99CC00", padding: "15px", minWidth: "150px" }}>Urgent & Important > {UrgentImp}</h5>
+                <Link to="/prioritized-task-list-with-react/new-task" style={{ textDecoration: 'none', color: "whitesmoke" }}>
+                    <button className="formButton" style={{ backgroundColor: "#54e346", color: "#aa3a3a" }}>Add</button>
                 </Link>
-                <Link to="/prioritized-task-list-with-react/2" style={{ textDecoration: 'none', color: "whitesmoke" }} >
-                    <h5 style={{ backgroundColor: "#36A4DD", padding: "15px", minWidth: "150px" }}>Important > {notUrgentImp}</h5>
+
+                <Link to="/prioritized-task-list-with-react/" style={{ textDecoration: 'none' }}>
+                    <div className="formButton" style={{ backgroundColor: "#aa3a3a", color: "#f8e4b7" }}>Home</div>
                 </Link>
-                <Link to="/prioritized-task-list-with-react/3" style={{ textDecoration: 'none', color: "whitesmoke" }} >
-                    <h5 style={{ backgroundColor: "#FF9F00", padding: "15px", minWidth: "150px" }}>Urgent > {UrgentNotImp}</h5>
+
+                <Link to="/prioritized-task-list-with-react/1" style={{ textDecoration: 'none' }} >
+                    <div className="formButton link" style={{ backgroundColor: "#99CC00" }}>Urgent & Important : {UrgentImp}</div>
                 </Link>
-                <Link to="/prioritized-task-list-with-react/4" style={{ textDecoration: 'none', color: "whitesmoke" }} >
-                    <h5 style={{ backgroundColor: "#FF4D4E", padding: "15px", minWidth: "150px", hover: { backgroundColor: "yellow" } }}>others > {notUrgentNotImp}</h5>
+
+                <Link to="/prioritized-task-list-with-react/2" style={{ textDecoration: 'none' }} >
+                    <div className="formButton link" style={{ backgroundColor: "#36A4DD" }}>Important :{notUrgentImp}</div>
                 </Link>
+
+                <Link to="/prioritized-task-list-with-react/3" style={{ textDecoration: 'none' }} >
+                    <div className="formButton link" style={{ backgroundColor: "#FF9F00" }}>Urgent : {UrgentNotImp}</div>
+                </Link>
+
+                <Link to="/prioritized-task-list-with-react/4" style={{ textDecoration: 'none' }} >
+                    <div className="formButton link" style={{ backgroundColor: "#FF4D4E" }}>others : {notUrgentNotImp}</div>
+                </Link>
+
             </div>
 
 

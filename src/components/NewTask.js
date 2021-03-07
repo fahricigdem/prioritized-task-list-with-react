@@ -10,17 +10,19 @@ const NewTask = () => {
     const [tasks, setTasks] = value1
     const [lastId, setLastId] = value2
 
-
-
-    // const [id, setId] = useState()
     const [title, setTitle] = useState("")
     const [text, setText] = useState("")
     const [categorie, setCategorie] = useState(null)
-    const [completed, setCompleted] = useState(false)
 
     const [isUrgent, setIsUrgent] = useState(false)
     const [isImportant, setIsImportant] = useState(false)
 
+
+    // let buttonStyleUrgent = isUrgent ? "btn btn-secondary" : "btn btn-light"
+    // let buttonStyleImportant = isImportant ? "btn btn-secondary" : "btn btn-light"
+
+    let buttonStyleUrgent = isUrgent ? "formButton clicked " : "formButton"
+    let buttonStyleImportant = isImportant ? "formButton clicked " : "formButton"
 
     const handleTitle = (e) => {
         setTitle(e.target.value)
@@ -29,7 +31,6 @@ const NewTask = () => {
     const handleText = (e) => {
         setText(e.target.value)
     }
-
 
     const handleIsUrgent = () => {
         setIsUrgent(!isUrgent)
@@ -54,7 +55,7 @@ const NewTask = () => {
             title: title,
             text: text,
             categorie: categorie,
-            completed: completed
+            completed: false
         }]
 
         setTasks(newTasks)
@@ -67,12 +68,25 @@ const NewTask = () => {
         setIsImportant(false)
     }
 
+    let UrgentImp = 0
+    let notUrgentImp = 0
+    let UrgentNotImp = 0
+    let notUrgentNotImp = 0
+
+    tasks.map(task => {
+        task.categorie == 1 && UrgentImp++
+        task.categorie == 2 && notUrgentImp++
+        task.categorie == 3 && UrgentNotImp++
+        task.categorie == 4 && notUrgentNotImp++
+        return (task)
+    })
+
     console.log(tasks[tasks.length - 1])
 
     return (
         <div className="formContainer"  >
 
-            <form className="newTaskForm" onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <input
                     className="newTaskInput"
                     type="text"
@@ -82,23 +96,14 @@ const NewTask = () => {
                     onChange={handleTitle}
                     required
                 />
+                <br />
 
-                <input
-                    type="checkbox"
-                    name="isUrgent"
-                    id="c1"
-                    checked={isUrgent}
-                    onChange={handleIsUrgent}
-                /> <label for="c1"><span></span>Urgent</label>
+                <div className={buttonStyleUrgent} onClick={handleIsUrgent}>Urgent</div>
+                <br />
+                <div className={buttonStyleImportant} onClick={handleIsImportant}>Important</div>
 
 
-                <input
-                    type="checkbox"
-                    name="isImportant"
-                    id="c2"
-                    checked={isImportant}
-                    onChange={handleIsImportant}
-                /> <label for="c2"><span></span>Important</label>
+                <br />
 
                 <textarea
                     className="newTaskDetail"
@@ -106,39 +111,37 @@ const NewTask = () => {
                     id="taskDetail"
                     value={text}
                     cols="24"
-                    rows="4"
+                    rows="2"
                     placeholder="New Task details..."
                     onChange={handleText}
                 />
                 <br />
-                <button id="add" className="btn btn-danger">Add</button>
-                <br />
 
-                <Link to="/prioritized-task-list-with-react/" style={{ textDecoration: 'none', color: "whitesmoke" }}>
-                    <h1 id="end" className="btn btn-info">Home</h1>
+                <button className="formButton" style={{ backgroundColor: "#54e346", color: "#aa3a3a" }}>Add</button>
+
+                <Link to="/prioritized-task-list-with-react/" style={{ textDecoration: 'none' }}>
+                    <div className="formButton" style={{ backgroundColor: "#aa3a3a", color: "#f8e4b7" }}>Home</div>
                 </Link>
-
-                <br />
-
-
-                <div className="categorieLinks">
-                    <Link to="/prioritized-task-list-with-react/1" style={{ textDecoration: 'none', color: "whitesmoke" }} >
-                        <h5 style={{ backgroundColor: "#99CC00", padding: "15px", minWidth: "150px" }}>Urgent & Important</h5>
-                    </Link>
-                    <Link to="/prioritized-task-list-with-react/2" style={{ textDecoration: 'none', color: "whitesmoke" }} >
-                        <h5 style={{ backgroundColor: "#36A4DD", padding: "15px", minWidth: "150px" }}>Important</h5>
-                    </Link>
-                    <Link to="/prioritized-task-list-with-react/3" style={{ textDecoration: 'none', color: "whitesmoke" }} >
-                        <h5 style={{ backgroundColor: "#FF9F00", padding: "15px", minWidth: "150px" }}>Urgent</h5>
-                    </Link>
-                    <Link to="/prioritized-task-list-with-react/4" style={{ textDecoration: 'none', color: "whitesmoke" }} >
-                        <h5 style={{ backgroundColor: "#FF4D4E", padding: "15px", minWidth: "150px" }}>others</h5>
-                    </Link>
-                </div>
-
-
             </form>
-        </div>
+            <br />
+
+            <div >
+                <Link to="/prioritized-task-list-with-react/1" style={{ textDecoration: 'none' }} >
+                    <div className="formButton link" style={{ backgroundColor: "#99CC00" }}>Urgent & Important : {UrgentImp}</div>
+                </Link>
+                <Link to="/prioritized-task-list-with-react/2" style={{ textDecoration: 'none' }} >
+                    <div className="formButton link" style={{ backgroundColor: "#36A4DD" }}>Important :{notUrgentImp}</div>
+                </Link>
+                <br />
+                <Link to="/prioritized-task-list-with-react/3" style={{ textDecoration: 'none' }} >
+                    <div className="formButton link" style={{ backgroundColor: "#FF9F00" }}>Urgent : {UrgentNotImp}</div>
+                </Link>
+                <Link to="/prioritized-task-list-with-react/4" style={{ textDecoration: 'none' }} >
+                    <div className="formButton link" style={{ backgroundColor: "#FF4D4E" }}>others : {notUrgentNotImp}</div>
+                </Link>
+            </div >
+
+        </div >
 
     )
 }
