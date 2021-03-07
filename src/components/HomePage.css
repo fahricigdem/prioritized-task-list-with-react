@@ -50,9 +50,9 @@
   }
 
   .UrgentImp:hover {
-    opacity: 0.6;
-    box-shadow: -6px -6px 10px #00cc3d5d,
-      6px 6px 10px #dbdfcf88;
+    opacity: 0.9;
+    box-shadow: -6px -6px 10px #99CC00,
+      6px 6px 10px #789e0688;
   }
 
   .UrgentImp:active {
@@ -73,9 +73,9 @@
   }
 
   .notUrgentImp:hover {
-    opacity: 0.6;
+    opacity: 0.9;
     box-shadow: -6px -6px 10px #36A4DD,
-      6px 6px 10px #dbdfcf88;
+      6px 6px 10px #36a5dd85;
   }
 
   .notUrgentImp:active {
@@ -96,9 +96,9 @@
   }
 
   .UrgentNotImp:hover {
-    opacity: 0.6;
+    opacity: 0.9;
     box-shadow: -6px -6px 10px #00cc3d5d,
-      6px 6px 10px #dbdfcf88;
+      6px 6px 10px #ff9d0086;
   }
 
   .UrgentNotImp:active {
@@ -118,9 +118,9 @@
   }
 
   .notUrgentNotImp:hover {
-    opacity: 0.6;
+    opacity: 0.9;
     box-shadow: -6px -6px 10px #00cc3d5d,
-      6px 6px 10px #dbdfcf88;
+      6px 6px 10px #ff4d4d86;
   }
 
   .notUrgentNotImp:active {
@@ -149,9 +149,9 @@
   }
 
   .AddHome:hover{
-    opacity: 0.6;
+    opacity: 0.9;
     box-shadow: -6px -6px 10px #00cc3d5d,
-      6px 6px 10px #dbdfcf88;
+      6px 6px 10px rgba(255, 0, 0, 0.616);
   }
 
   .AddHome:active {

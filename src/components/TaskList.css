@@ -1,16 +1,50 @@
-/* Include the padding and border in an element's total width and height */
-* {
-    box-sizing: border-box;
-  }
-  
-nav{
-    background-color: rgba(85, 85, 85, 0.459);
+.container{
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #555;
+  min-width: 100vw
 }
 
-  /* Remove margins and padding from the list */
+.taskrow{
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  border: solid white 1px;
+}
+
+.deleteTask{
+  background-color: #ec4646 ;
+  padding: 9px 1vw; 
+  margin: 0;
+  width: 11vw;
+  cursor: pointer;
+}
+
+.deleteTask:hover{
+  background-color: #d45e5e ;
+  padding: 9px 1vw; 
+  margin: 0;
+  width: 11vw;
+  cursor: pointer;
+}
+
+.categorieLinks{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
+/* Remove margins and padding from the list */
   ul {
     margin: 0;
     padding: 0;
+    text-align: left;
   }
   
   /* Style the list items */
@@ -18,10 +52,11 @@ nav{
     cursor: pointer;
     list-style: none;
     position: relative;
-    padding: 12px 8px 12px 40px;
+    padding: 1vh 1vw 1vh 2vw;
     background: #eee;
     font-size: 18px;
     transition: 0.2s;
+    width: 75vw;
   
     /* make the list items unselectable */
     -webkit-user-select: none;
@@ -58,7 +93,7 @@ nav{
     left: 16px;
     transform: rotate(45deg);
     height: 15px;
-    width: 7px;
+    width: 1vw;
   }
   
   /* Style the close button */

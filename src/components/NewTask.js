@@ -70,7 +70,7 @@ const NewTask = () => {
     console.log(tasks[tasks.length - 1])
 
     return (
-        <div className="formContainer" style={{ minHeight: '100vh' }} >
+        <div className="formContainer"  >
 
             <form className="newTaskForm" onSubmit={handleSubmit}>
                 <input
@@ -115,9 +115,26 @@ const NewTask = () => {
                 <br />
 
                 <Link to="/prioritized-task-list-with-react/" style={{ textDecoration: 'none', color: "whitesmoke" }}>
-                    <h1 id="end" className="btn btn-warning">End</h1>
+                    <h1 id="end" className="btn btn-info">Home</h1>
                 </Link>
 
+                <br />
+
+
+                <div className="categorieLinks">
+                    <Link to="/prioritized-task-list-with-react/1" style={{ textDecoration: 'none', color: "whitesmoke" }} >
+                        <h5 style={{ backgroundColor: "#99CC00", padding: "15px", minWidth: "150px" }}>Urgent & Important</h5>
+                    </Link>
+                    <Link to="/prioritized-task-list-with-react/2" style={{ textDecoration: 'none', color: "whitesmoke" }} >
+                        <h5 style={{ backgroundColor: "#36A4DD", padding: "15px", minWidth: "150px" }}>Important</h5>
+                    </Link>
+                    <Link to="/prioritized-task-list-with-react/3" style={{ textDecoration: 'none', color: "whitesmoke" }} >
+                        <h5 style={{ backgroundColor: "#FF9F00", padding: "15px", minWidth: "150px" }}>Urgent</h5>
+                    </Link>
+                    <Link to="/prioritized-task-list-with-react/4" style={{ textDecoration: 'none', color: "whitesmoke" }} >
+                        <h5 style={{ backgroundColor: "#FF4D4E", padding: "15px", minWidth: "150px" }}>others</h5>
+                    </Link>
+                </div>
 
 
             </form>

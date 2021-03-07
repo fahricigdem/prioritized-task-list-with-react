@@ -11,13 +11,28 @@ const Navbar = () => {
     const { value1, value2 } = React.useContext(TaskContext);
     const [tasks, setTasks] = value1
 
+    let completed = 0
+    tasks.map(task => {
+        if (task.completed) {
+            completed++
+        }
+
+        return task
+    }
+
+    )
+
 
     return (
         <nav className="navBar">
             <Link to="/prioritized-task-list-with-react/" style={{ textDecoration: 'none', color: "whitesmoke" }}>
-                <h1 style={{ width: "130px", border: "1px solid #aaaaaa", padding: "10px" }}>Home</h1>
+                <h1 className="btn btn-info">Home</h1>
             </Link>
-            <div className="badge badge-warning">{tasks.length}</div>
+
+
+            <div className="badge badge-warning">Total Tasks: {tasks.length}</div>
+            <div className="badge badge-danger">Total Done: {completed} </div>
+
         </nav>
     )
 }

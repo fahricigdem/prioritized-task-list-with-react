@@ -9,3 +9,7 @@
     height:10vh;
     font-size:110%;
 }
+
+#allTasksBadge{
+    justify-self:end;
+}

@@ -69,8 +69,18 @@ input[type="checkbox"]:checked + label span {
 }
 
 #end {
+    padding-top: 20px;
     min-width: 20vw;
     min-height: 10vh;
+}
+
+.categorieLinks{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
 }
 
 
