@@ -20,8 +20,9 @@ function App() {
           <Switch>
 
             <Route path="/prioritized-task-list-with-react/" exact component={HomePage} />
-            <Route path="/prioritized-task-list-with-react/:cat" component={TaskList} />
             <Route path="/prioritized-task-list-with-react/new-task" component={NewTask} />
+            <Route path="/prioritized-task-list-with-react/:cat" component={TaskList} />
+
 
           </Switch>
         </div>
