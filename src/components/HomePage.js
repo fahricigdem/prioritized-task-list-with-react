@@ -68,6 +68,9 @@ function HomePage() {
                 </Link>
 
             </div>
+            <Link to="/prioritized-task-list-with-react/5" style={{ textDecoration: 'none' }} >
+                <div className="badge badge-warning" style={{ minWidth: "90vw", minHeight: "10vh", paddingTop: "3.5vh", marginTop: "10px" }}>All : {tasks.length}</div>
+            </Link>
 
         </div>
     );

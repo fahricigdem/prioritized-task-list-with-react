@@ -45,7 +45,7 @@ const TaskGeneration = ({ cat }) => {
                         onClick={() => handleCompleted(task.id)}
                     >
 
-                        {task.title}
+                        {task.title}{task.id}
                     </li>
 
                     <p onClick={() => handleDelete(task.id)} className="formButton" style={{ minWidth: "3vw", padding: '1vw', backgroundColor: "#ec5858", color: "whitesmoke" }} > del  </p>
