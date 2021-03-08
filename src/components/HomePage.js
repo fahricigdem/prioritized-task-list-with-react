@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import './HomePage.css'
 import { Link } from 'react-router-dom';
 import { TaskContext } from './TaskContext'
+import TaskListLink from "./TaskListLink"
 
 const HomePage = () => {
 
@@ -25,21 +26,8 @@ const HomePage = () => {
         <div className="HomePage">
 
             <div className="TaskGroupRow">
-
-                <Link to="/prioritized-task-list-with-react/1" style={{ textDecoration: 'none', color: "whitesmoke" }} >
-                    <div className="TaskGroup UrgentImp" >
-                        <h5>Urgent & Important</h5>
-                        <h4><span className="badge rounded-pill bg-secondary">{UrgentImp}</span></h4>
-                    </div>
-                </Link>
-
-                <Link to="/prioritized-task-list-with-react/2" style={{ textDecoration: 'none', color: "whitesmoke" }} >
-                    <div className="TaskGroup notUrgentImp">
-                        <h5>Important</h5>
-                        <h4><span className="badge rounded-pill bg-secondary">{notUrgentImp}</span></h4>
-                    </div>
-                </Link>
-
+                <TaskListLink listNu="1" listName="UrgentImp" title="Urgent & Important" numOfEl={UrgentImp} />
+                <TaskListLink listNu="2" listName="notUrgentImp" title="Important" numOfEl={notUrgentImp} />
             </div>
 
             <Link to="/prioritized-task-list-with-react/new-task" style={{ textDecoration: 'none' }}>
@@ -47,26 +35,9 @@ const HomePage = () => {
             </Link>
 
             <div className="TaskGroupRow">
-
-                <Link to="/prioritized-task-list-with-react/3" style={{ textDecoration: 'none', color: "whitesmoke" }} >
-                    <div className="TaskGroup UrgentNotImp">
-                        <h5>Urgent</h5>
-                        <h4><span className="badge rounded-pill bg-secondary">{UrgentNotImp}</span></h4>
-                    </div>
-                </Link>
-
-                <Link to="/prioritized-task-list-with-react/4" style={{ textDecoration: 'none', color: "whitesmoke" }} >
-                    <div className="TaskGroup notUrgentNotImp">
-                        <h5>others</h5>
-                        <h4><span className="badge rounded-pill bg-secondary">{notUrgentNotImp}</span></h4>
-                    </div>
-                </Link>
-
+                <TaskListLink listNu="3" listName="UrgentNotImp" title="Urgent" numOfEl={UrgentNotImp} />
+                <TaskListLink listNu="4" listName="notUrgentNotImp" title="others" numOfEl={notUrgentNotImp} />
             </div>
-            <Link to="/prioritized-task-list-with-react/5" style={{ textDecoration: 'none' }} >
-                <div className="badge badge-warning" style={{ minWidth: "90vw", minHeight: "10vh", paddingTop: "3.5vh", marginTop: "10px" }}>All : {tasks.length}</div>
-            </Link>
-
         </div>
     );
 }
