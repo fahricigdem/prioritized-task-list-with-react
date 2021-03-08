@@ -97,7 +97,7 @@
 
   .UrgentNotImp:hover {
     opacity: 0.9;
-    box-shadow: -6px -6px 10px #00cc3d5d,
+    box-shadow: -6px -6px 10px #ff9d0060,
       6px 6px 10px #ff9d0086;
   }
 
@@ -110,16 +110,16 @@
 /* ---------------------------------------------------- */
   .notUrgentNotImp{
     
-    background-color: #FF4D4E;
+    background-color: #8f4f4f;
     border-radius: 30% 0% 5% 0%;
     transition: all 0.1s ease-in-out;
-    box-shadow: -6px -6px 12px #12abda5d,
+    box-shadow: -6px -6px 12px #8f4f4f56,
     9px 9px 15px #dbdfcf4d;
   }
 
   .notUrgentNotImp:hover {
     opacity: 0.9;
-    box-shadow: -6px -6px 10px #00cc3d5d,
+    box-shadow: -6px -6px 10px #8f4f4f56,
       6px 6px 10px #ff4d4d86;
   }
 
@@ -144,13 +144,13 @@
     border: solid white 1px;
 
     transition: all 0.1s ease-in-out;
-    box-shadow: -6px -6px 12px #12abda5d,
+    box-shadow: -6px -6px 12px rgba(255, 0, 0, 0.355),
     9px 9px 15px #dbdfcf4d;
   }
 
   .AddHome:hover{
     opacity: 0.9;
-    box-shadow: -6px -6px 10px #00cc3d5d,
+    box-shadow: -6px -6px 10px rgba(255, 0, 0, 0.596),
       6px 6px 10px rgba(255, 0, 0, 0.616);
   }
 
