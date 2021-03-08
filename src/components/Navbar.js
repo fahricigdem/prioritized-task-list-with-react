@@ -14,11 +14,11 @@ const Navbar = () => {
     return (
         <nav className="navBar">
             <Link to="/prioritized-task-list-with-react/" style={{ textDecoration: 'none', color: "whitesmoke" }}>
-                <h1 className="btn btn-info">Home</h1>
+                <h1 className="navButton navHome">Home</h1>
             </Link>
 
             <Link to="/prioritized-task-list-with-react/5" style={{ textDecoration: 'none' }} >
-                <div className="badge badge-warning">All : {tasks.length}</div>
+                <div className="navButton">All : {tasks.length}</div>
             </Link>
 
             <div className="badge badge-danger">Done : {completed} </div>
