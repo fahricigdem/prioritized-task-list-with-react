@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { TaskContext } from './TaskContext'
 
 const TaskGeneration = ({ cat }) => {
@@ -16,10 +16,6 @@ const TaskGeneration = ({ cat }) => {
             })
         )
     }
-
-
-
-
     const handleCompleted = (id) => {
 
         setTasks(
