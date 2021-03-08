@@ -20,8 +20,6 @@ export const TaskProvider = (props) => {
         localStorage.setItem("tasks", JSON.stringify(tasks))
         localStorage.setItem("lastId", JSON.stringify(lastId))
 
-        // console.log("stateData (in saveLocalTodos) ", this.state.data)
-        // console.log("todoLocal (in saveLocalTodos) ", JSON.parse(localStorage.getItem("todos")))
     }
 
     const getLocalInfo = () => {
@@ -32,24 +30,11 @@ export const TaskProvider = (props) => {
         } else {
             let tasksLocal = JSON.parse(localStorage.getItem("tasks"))
             let lastIdLocal = JSON.parse(localStorage.getItem("lastId"))
-            // console.log("in getLocalTodos todoLocal", todoLocal)
+
             setTasks(tasksLocal)
             setLastId(lastIdLocal)
         }
-
-        // if (localStorage.getItem("lastId") === null) {
-        //     localStorage.setItem("lastId", JSON.stringify())
-        // } else {
-        //     let lastIdLocal = JSON.parse(localStorage.getItem("lastId"))
-        //     // console.log("in getLocalTodos todoLocal", todoLocal)
-        //     setTasks(lastIdLocal)
-        // }
-
-
     }
-
-
-
 
     return (
         <TaskContext.Provider value={{ value1: [tasks, setTasks], value2: [lastId, setLastId] }}>

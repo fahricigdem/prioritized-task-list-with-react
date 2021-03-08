@@ -55,12 +55,10 @@ const TaskGeneration = ({ cat }) => {
                     <p onClick={() => handleDetail(task.id)} className="formButton" style={{ minWidth: "3vw", padding: '1vw', backgroundColor: "#f0c929", color: "whitesmoke" }} > detail  </p>
                     <p onClick={() => handleDelete(task.id)} className="formButton" style={{ minWidth: "3vw", padding: '1vw', backgroundColor: "#ec5858", color: "whitesmoke" }} > del  </p>
 
-                    {/* <span onClick={() => handleDetail(task.id)}> detail </span> */}
                 </div>
             )
         }
-    }
-    )
+    })
 
     return (
         <ul id="myUL">
