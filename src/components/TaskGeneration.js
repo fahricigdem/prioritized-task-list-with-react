@@ -1,10 +1,24 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { TaskContext } from './TaskContext'
 
 const TaskGeneration = ({ cat }) => {
 
     const { value1 } = useContext(TaskContext);
     const [tasks, setTasks] = value1
+
+    const handleDetail = (id) => {
+        setTasks(
+            [...tasks].map(task => {
+                if (task.id === id) {
+                    task.detail = !task.detail
+                }
+                return task
+            })
+        )
+    }
+
+
+
 
     const handleCompleted = (id) => {
 
@@ -38,10 +52,14 @@ const TaskGeneration = ({ cat }) => {
                         onClick={() => handleCompleted(task.id)}
                     >
                         {task.title}
-                    </li>
+                        {task.text && <span style={{ color: "grey", fontSize: "calc(7px + 2vmin)" }}> ...</span>}
+                        {task.detail && <p style={{ color: "grey", fontSize: "calc(7px + 2vmin)" }}>{task.text}</p>}
 
+                    </li>
+                    <p onClick={() => handleDetail(task.id)} className="formButton" style={{ minWidth: "3vw", padding: '1vw', backgroundColor: "#f0c929", color: "whitesmoke" }} > detail  </p>
                     <p onClick={() => handleDelete(task.id)} className="formButton" style={{ minWidth: "3vw", padding: '1vw', backgroundColor: "#ec5858", color: "whitesmoke" }} > del  </p>
 
+                    {/* <span onClick={() => handleDetail(task.id)}> detail </span> */}
                 </div>
             )
         }

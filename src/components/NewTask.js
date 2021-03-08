@@ -49,13 +49,14 @@ const NewTask = () => {
             title: title,
             text: text,
             categorie: categorie,
-            completed: false
+            completed: false,
+            detail: false
         }]
 
         setTasks(newTasks)
         setLastId(lastId + 1)
         setTitle("")
-        setText("")
+        setText("details...")
         setIsUrgent(false)
         setIsImportant(false)
     }
@@ -88,7 +89,7 @@ const NewTask = () => {
                     value={text}
                     cols="24"
                     rows="2"
-                    placeholder="New Task details..."
+                    placeholder="Task details: ..."
                     onChange={handleText}
                 /><br />
 

@@ -35,7 +35,7 @@ const TaskListLinkButtons = () => {
                 <div className="formButton link" style={{ backgroundColor: "#FF4D4E" }}>others : {notUrgentNotImp}</div>
             </Link>
             <Link to="/prioritized-task-list-with-react/5" style={{ textDecoration: 'none' }} >
-                <div className="badge badge-warning" style={{ minWidth: "45vw", minHeight: "10vh", paddingTop: "3.5vh", marginTop: "10px" }}>All : {tasks.length}</div>
+                <div className="formButton link" style={{ fontSize: "calc(10px + 2vmin)", color: 'black', backgroundColor: "#e3e3e3" }}>All : {tasks.length}</div>
             </Link>
         </div>
     )
