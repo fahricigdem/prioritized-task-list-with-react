@@ -3,9 +3,7 @@ import './HomePage.css'
 import { Link } from 'react-router-dom';
 import { TaskContext } from './TaskContext'
 
-
-
-function HomePage() {
+const HomePage = () => {
 
     const { value1 } = useContext(TaskContext);
     const [tasks] = value1
@@ -44,12 +42,9 @@ function HomePage() {
 
             </div>
 
-
-
             <Link to="/prioritized-task-list-with-react/new-task" style={{ textDecoration: 'none' }}>
                 <div className="AddHome"><h1> + </h1></div>
             </Link>
-
 
             <div className="TaskGroupRow">
 

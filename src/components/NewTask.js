@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './NewTask.css';
 import { TaskContext } from './TaskContext'
-import { Link } from 'react-router-dom'
 import TaskListLinkButtons from "./TaskListLinkButtons"
 
 const NewTask = () => {
@@ -20,14 +19,6 @@ const NewTask = () => {
     let buttonStyleUrgent = isUrgent ? "formButton clicked " : "formButton"
     let buttonStyleImportant = isImportant ? "formButton clicked " : "formButton"
 
-    const handleTitle = (e) => {
-        setTitle(e.target.value)
-    }
-
-    const handleText = (e) => {
-        setText(e.target.value)
-    }
-
     const handleIsUrgent = () => {
         setIsUrgent(!isUrgent)
     }
@@ -42,6 +33,13 @@ const NewTask = () => {
                 isUrgent && !isImportant ? setCategorie(3) : setCategorie(4)
     }, [isUrgent, isImportant])
 
+    const handleTitle = (e) => {
+        setTitle(e.target.value)
+    }
+
+    const handleText = (e) => {
+        setText(e.target.value)
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -55,21 +53,20 @@ const NewTask = () => {
         }]
 
         setTasks(newTasks)
-
         setLastId(lastId + 1)
-
         setTitle("")
         setText("")
         setIsUrgent(false)
         setIsImportant(false)
     }
 
-    console.log(tasks[tasks.length - 1])
+    // console.log(tasks[tasks.length - 1])
 
     return (
         <div className="formContainer"  >
 
             <form onSubmit={handleSubmit}>
+
                 <input
                     className="newTaskInput"
                     type="text"
@@ -78,15 +75,11 @@ const NewTask = () => {
                     placeholder="New Task Title"
                     onChange={handleTitle}
                     required
-                />
-                <br />
+                /><br />
 
-                <div className={buttonStyleUrgent} onClick={handleIsUrgent}>Urgent</div>
-                <br />
-                <div className={buttonStyleImportant} onClick={handleIsImportant}>Important</div>
+                <div className={buttonStyleUrgent} onClick={handleIsUrgent}>Urgent</div><br />
 
-
-                <br />
+                <div className={buttonStyleImportant} onClick={handleIsImportant}>Important</div><br />
 
                 <textarea
                     className="newTaskDetail"
@@ -97,22 +90,15 @@ const NewTask = () => {
                     rows="2"
                     placeholder="New Task details..."
                     onChange={handleText}
-                />
-                <br />
+                /><br />
 
                 <button className="formButton" style={{ backgroundColor: "#54e346", color: "#aa3a3a" }}>Add</button>
 
-            </form>
-            <br />
+            </form><br />
 
             <TaskListLinkButtons />
 
-            <Link to="/prioritized-task-list-with-react/5" style={{ textDecoration: 'none' }} >
-                <div className="badge badge-warning" style={{ minWidth: "45vw", minHeight: "10vh", paddingTop: "3.5vh", marginTop: "10px" }}>All : {tasks.length}</div>
-            </Link>
-
-        </div >
-
+        </div>
     )
 }
 

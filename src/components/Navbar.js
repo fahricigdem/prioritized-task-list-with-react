@@ -9,16 +9,7 @@ const Navbar = () => {
     const [tasks] = value1
 
     let completed = 0
-    tasks.map(task => {
-        if (task.completed) {
-            completed++
-        }
-
-        return task
-    }
-
-    )
-
+    tasks.map(task => { task.completed && completed++; return task })
 
     return (
         <nav className="navBar">
@@ -29,8 +20,6 @@ const Navbar = () => {
             <Link to="/prioritized-task-list-with-react/5" style={{ textDecoration: 'none' }} >
                 <div className="badge badge-warning">All : {tasks.length}</div>
             </Link>
-
-            {/* <div className="badge badge-warning">Total Tasks: {tasks.length}</div> */}
 
             <div className="badge badge-danger">Done : {completed} </div>
 
