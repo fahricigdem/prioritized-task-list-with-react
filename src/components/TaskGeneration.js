@@ -1,39 +1,32 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import { TaskContext } from './TaskContext'
 
 const TaskGeneration = ({ cat }) => {
 
-    const { value1, value2 } = React.useContext(TaskContext);
+    const { value1 } = useContext(TaskContext);
     const [tasks, setTasks] = value1
 
     const handleCompleted = (id) => {
 
         setTasks(
             [...tasks].map(task => {
-                if (task.id == id) {
-
+                if (task.id === id) {
                     task.completed = !task.completed
-
                 }
                 return task
-
             })
         )
-
     }
 
     const handleDelete = (id) => {
-
         setTasks(
-            [...tasks].filter(task => task.id != id)
+            [...tasks].filter(task => task.id !== id)
         )
-
-
     }
 
     const data = tasks.map(task => {
 
-        if (task.categorie === cat || cat == 5) {
+        if (task.categorie === cat || cat === 5) {
             let style
             style = task.completed && "checked"
 
@@ -44,7 +37,6 @@ const TaskGeneration = ({ cat }) => {
                         className={style}
                         onClick={() => handleCompleted(task.id)}
                     >
-
                         {task.title}
                     </li>
 
@@ -57,13 +49,9 @@ const TaskGeneration = ({ cat }) => {
     )
 
     return (
-
         <ul id="myUL">
-
             { data}
-
         </ul>
-
     )
 }
 

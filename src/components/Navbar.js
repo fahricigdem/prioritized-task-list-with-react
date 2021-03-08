@@ -3,13 +3,10 @@ import "./Navbar.css"
 import { Link } from 'react-router-dom'
 import { TaskContext } from './TaskContext'
 
-
-
-
 const Navbar = () => {
 
-    const { value1, value2 } = React.useContext(TaskContext);
-    const [tasks, setTasks] = value1
+    const { value1 } = React.useContext(TaskContext);
+    const [tasks] = value1
 
     let completed = 0
     tasks.map(task => {

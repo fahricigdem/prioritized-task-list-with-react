@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import './HomePage.css'
 import { Link } from 'react-router-dom';
 import { TaskContext } from './TaskContext'
@@ -7,8 +7,8 @@ import { TaskContext } from './TaskContext'
 
 function HomePage() {
 
-    const { value1, value2 } = React.useContext(TaskContext);
-    const [tasks, setTasks] = value1
+    const { value1 } = useContext(TaskContext);
+    const [tasks] = value1
 
     let UrgentImp = 0
     let notUrgentImp = 0
@@ -16,10 +16,10 @@ function HomePage() {
     let notUrgentNotImp = 0
 
     tasks.map(task => {
-        task.categorie == 1 && UrgentImp++
-        task.categorie == 2 && notUrgentImp++
-        task.categorie == 3 && UrgentNotImp++
-        task.categorie == 4 && notUrgentNotImp++
+        task.categorie === 1 && UrgentImp++
+        task.categorie === 2 && notUrgentImp++
+        task.categorie === 3 && UrgentNotImp++
+        task.categorie === 4 && notUrgentNotImp++
         return (task)
     })
 

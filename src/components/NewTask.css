@@ -11,6 +11,15 @@
     justify-content: center;
 }
 
+.buttonContainer{
+    justify-self: flex-end;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
 
 
  /* ---------------------input starts-------------------------------- */

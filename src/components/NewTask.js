@@ -2,11 +2,11 @@ import React, { useState, useEffect, useContext } from 'react';
 import './NewTask.css';
 import { TaskContext } from './TaskContext'
 import { Link } from 'react-router-dom'
-
+import TaskListLinkButtons from "./TaskListLinkButtons"
 
 const NewTask = () => {
 
-    const { value1, value2 } = React.useContext(TaskContext);
+    const { value1, value2 } = useContext(TaskContext);
     const [tasks, setTasks] = value1
     const [lastId, setLastId] = value2
 
@@ -16,10 +16,6 @@ const NewTask = () => {
 
     const [isUrgent, setIsUrgent] = useState(false)
     const [isImportant, setIsImportant] = useState(false)
-
-
-    // let buttonStyleUrgent = isUrgent ? "btn btn-secondary" : "btn btn-light"
-    // let buttonStyleImportant = isImportant ? "btn btn-secondary" : "btn btn-light"
 
     let buttonStyleUrgent = isUrgent ? "formButton clicked " : "formButton"
     let buttonStyleImportant = isImportant ? "formButton clicked " : "formButton"
@@ -68,19 +64,6 @@ const NewTask = () => {
         setIsImportant(false)
     }
 
-    let UrgentImp = 0
-    let notUrgentImp = 0
-    let UrgentNotImp = 0
-    let notUrgentNotImp = 0
-
-    tasks.map(task => {
-        task.categorie == 1 && UrgentImp++
-        task.categorie == 2 && notUrgentImp++
-        task.categorie == 3 && UrgentNotImp++
-        task.categorie == 4 && notUrgentNotImp++
-        return (task)
-    })
-
     console.log(tasks[tasks.length - 1])
 
     return (
@@ -119,27 +102,10 @@ const NewTask = () => {
 
                 <button className="formButton" style={{ backgroundColor: "#54e346", color: "#aa3a3a" }}>Add</button>
 
-                <Link to="/prioritized-task-list-with-react/" style={{ textDecoration: 'none' }}>
-                    <div className="formButton" style={{ backgroundColor: "#aa3a3a", color: "#f8e4b7" }}>Home</div>
-                </Link>
             </form>
             <br />
 
-            <div >
-                <Link to="/prioritized-task-list-with-react/1" style={{ textDecoration: 'none' }} >
-                    <div className="formButton link" style={{ backgroundColor: "#99CC00" }}>Urgent & Important : {UrgentImp}</div>
-                </Link>
-                <Link to="/prioritized-task-list-with-react/2" style={{ textDecoration: 'none' }} >
-                    <div className="formButton link" style={{ backgroundColor: "#36A4DD" }}>Important :{notUrgentImp}</div>
-                </Link>
-                <br />
-                <Link to="/prioritized-task-list-with-react/3" style={{ textDecoration: 'none' }} >
-                    <div className="formButton link" style={{ backgroundColor: "#FF9F00" }}>Urgent : {UrgentNotImp}</div>
-                </Link>
-                <Link to="/prioritized-task-list-with-react/4" style={{ textDecoration: 'none' }} >
-                    <div className="formButton link" style={{ backgroundColor: "#FF4D4E" }}>others : {notUrgentNotImp}</div>
-                </Link>
-            </div >
+            <TaskListLinkButtons />
 
             <Link to="/prioritized-task-list-with-react/5" style={{ textDecoration: 'none' }} >
                 <div className="badge badge-warning" style={{ minWidth: "45vw", minHeight: "10vh", paddingTop: "3.5vh", marginTop: "10px" }}>All : {tasks.length}</div>
