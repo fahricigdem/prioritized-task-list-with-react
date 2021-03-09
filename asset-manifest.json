@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/prioritized-task-list-with-react/static/css/main.2d9786aa.chunk.css",
-    "main.js": "/prioritized-task-list-with-react/static/js/main.a049d9fe.chunk.js",
-    "main.js.map": "/prioritized-task-list-with-react/static/js/main.a049d9fe.chunk.js.map",
+    "main.css": "/prioritized-task-list-with-react/static/css/main.41e8e516.chunk.css",
+    "main.js": "/prioritized-task-list-with-react/static/js/main.973f0ea1.chunk.js",
+    "main.js.map": "/prioritized-task-list-with-react/static/js/main.973f0ea1.chunk.js.map",
     "runtime-main.js": "/prioritized-task-list-with-react/static/js/runtime-main.59bccee2.js",
     "runtime-main.js.map": "/prioritized-task-list-with-react/static/js/runtime-main.59bccee2.js.map",
     "static/css/2.fabbef47.chunk.css": "/prioritized-task-list-with-react/static/css/2.fabbef47.chunk.css",
@@ -12,14 +12,14 @@
     "static/js/3.a8280468.chunk.js.map": "/prioritized-task-list-with-react/static/js/3.a8280468.chunk.js.map",
     "index.html": "/prioritized-task-list-with-react/index.html",
     "static/css/2.fabbef47.chunk.css.map": "/prioritized-task-list-with-react/static/css/2.fabbef47.chunk.css.map",
-    "static/css/main.2d9786aa.chunk.css.map": "/prioritized-task-list-with-react/static/css/main.2d9786aa.chunk.css.map",
+    "static/css/main.41e8e516.chunk.css.map": "/prioritized-task-list-with-react/static/css/main.41e8e516.chunk.css.map",
     "static/js/2.595a012d.chunk.js.LICENSE.txt": "/prioritized-task-list-with-react/static/js/2.595a012d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.59bccee2.js",
     "static/css/2.fabbef47.chunk.css",
     "static/js/2.595a012d.chunk.js",
-    "static/css/main.2d9786aa.chunk.css",
-    "static/js/main.a049d9fe.chunk.js"
+    "static/css/main.41e8e516.chunk.css",
+    "static/js/main.973f0ea1.chunk.js"
   ]
 }
