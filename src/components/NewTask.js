@@ -17,7 +17,7 @@ const NewTask = () => {
     const [isImportant, setIsImportant] = useState(false)
 
     let buttonStyleUrgent = isUrgent ? "formButton  urgent " : "formButton "
-    let buttonStyleImportant = isImportant ? "formButton   important" : "formButton "
+    let buttonStyleImportant = isImportant ? "formButton  important" : "formButton "
 
     const handleIsUrgent = () => {
         setIsUrgent(!isUrgent)
@@ -78,9 +78,9 @@ const NewTask = () => {
                     required
                 /><br />
 
-                <div className={buttonStyleUrgent} onClick={handleIsUrgent}>Urgent</div>
+                <div className={buttonStyleUrgent} onClick={handleIsUrgent} style={{ borderStyle: "dashed", borderColor: "#FF9F00" }}>Urgent</div>
 
-                <div className={buttonStyleImportant} onClick={handleIsImportant}>Important</div><br />
+                <div className={buttonStyleImportant} onClick={handleIsImportant} style={{ borderStyle: "dashed", borderColor: "#36A4DD" }}>Important</div><br />
 
                 <textarea
                     className="newTaskDetail"
