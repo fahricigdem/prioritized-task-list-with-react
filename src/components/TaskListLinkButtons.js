@@ -26,7 +26,7 @@ const TaskListLinkButtons = () => {
                 <div className="formButton link" style={{ backgroundColor: "#99CC00" }}>Urgent & Important : {UrgentImp}</div>
             </Link>
             <Link to="/prioritized-task-list-with-react/2" style={{ textDecoration: 'none' }} >
-                <div className="formButton link" style={{ backgroundColor: "#36A4DD" }}>Important :{notUrgentImp}</div>
+                <div className="formButton link" style={{ backgroundColor: "#36A4DD" }}>Important : {notUrgentImp}</div>
             </Link>
             <Link to="/prioritized-task-list-with-react/3" style={{ textDecoration: 'none' }} >
                 <div className="formButton link" style={{ backgroundColor: "#FF9F00" }}>Urgent : {UrgentNotImp}</div>
@@ -34,9 +34,7 @@ const TaskListLinkButtons = () => {
             <Link to="/prioritized-task-list-with-react/4" style={{ textDecoration: 'none' }} >
                 <div className="formButton link" style={{ backgroundColor: "#FF4D4E" }}>others : {notUrgentNotImp}</div>
             </Link>
-            {/* <Link to="/prioritized-task-list-with-react/5" style={{ textDecoration: 'none' }} >
-                <div className="formButton link" style={{ fontSize: "calc(10px + 2vmin)", color: 'black', backgroundColor: "#e3e3e3" }}>All : {tasks.length}</div>
-            </Link> */}
+
         </div>
     )
 }
