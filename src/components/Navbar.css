@@ -18,18 +18,19 @@
     background-color: rgba(245, 245, 245); 
     border: none;
     color:rgba(0, 0, 0, 0.74);
-    font-size: x-large;
-    padding: 10px 10px;
+    /* font-size: x-large; */
+    padding: 5px 3px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     margin: 4px 2px;
     cursor: pointer;
-    width: 20vw
+    width: 25vw;
+    border-radius:40%
   }
 
   .navHome{
-    width: 30vw;
+    width: 40vw;
     background-color:red;
     font-size: xx-large;
     color: antiquewhite;

@@ -16,8 +16,8 @@ const NewTask = () => {
     const [isUrgent, setIsUrgent] = useState(false)
     const [isImportant, setIsImportant] = useState(false)
 
-    let buttonStyleUrgent = isUrgent ? "formButton clicked " : "formButton"
-    let buttonStyleImportant = isImportant ? "formButton clicked " : "formButton"
+    let buttonStyleUrgent = isUrgent ? "formButton  urgent " : "formButton "
+    let buttonStyleImportant = isImportant ? "formButton   important" : "formButton "
 
     const handleIsUrgent = () => {
         setIsUrgent(!isUrgent)
@@ -78,7 +78,7 @@ const NewTask = () => {
                     required
                 /><br />
 
-                <div className={buttonStyleUrgent} onClick={handleIsUrgent}>Urgent</div><br />
+                <div className={buttonStyleUrgent} onClick={handleIsUrgent}>Urgent</div>
 
                 <div className={buttonStyleImportant} onClick={handleIsImportant}>Important</div><br />
 
@@ -93,7 +93,7 @@ const NewTask = () => {
                     onChange={handleText}
                 /><br />
 
-                <button className="formButton" style={{ backgroundColor: "#54e346", color: "#aa3a3a" }}>Add</button>
+                <button className="formButton add">Add</button>
 
             </form><br />
 
