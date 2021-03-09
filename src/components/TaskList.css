@@ -33,7 +33,8 @@
     display:inline-block;
     position: relative;
     padding: 1vh 1vw 0.4vh 4vw;
-    background: #eee;
+    background: #555; /*eee */
+    color:#fff;
     transition: 0.2s;
     width: 70vw;
   
@@ -52,7 +53,7 @@
   /* When clicked on, add a background color and strike out text */
   ul li.checked {
     background: #888;
-    color: #fff;
+    color: #aaa;
     text-decoration: line-through;
   }
   
@@ -93,7 +94,7 @@
     .link {
       padding: 1vh .1vw; 
       width: 40vw; 
-      font-size: calc(8px + 2vmin); 
+      font-size: calc(10px + 2vmin); 
       color: whitesmoke;
   }
   

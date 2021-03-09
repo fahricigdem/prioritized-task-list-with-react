@@ -77,7 +77,7 @@
   .link {
     padding: 1vh 0vw; 
     width: 40vw; 
-    font-size: calc(5px + 2vmin); 
+    font-size: calc(12px + 2vmin); 
     color: whitesmoke;
     border: solid white 0px;
 }

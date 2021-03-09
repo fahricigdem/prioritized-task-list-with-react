@@ -14,19 +14,13 @@ function App() {
     <TaskProvider>
       <Router>
 
+        <Navbar />
 
-        <div>
-          <Navbar />
-          <Switch>
-
-            <Route path="/prioritized-task-list-with-react/" exact component={HomePage} />
-            <Route path="/prioritized-task-list-with-react/new-task" component={NewTask} />
-            <Route path="/prioritized-task-list-with-react/:cat" component={TaskList} />
-
-
-          </Switch>
-        </div>
-
+        <Switch>
+          <Route path="/prioritized-task-list-with-react/" exact component={HomePage} />
+          <Route path="/prioritized-task-list-with-react/new-task" component={NewTask} />
+          <Route path="/prioritized-task-list-with-react/:cat" component={TaskList} />
+        </Switch>
 
       </Router>
     </TaskProvider>

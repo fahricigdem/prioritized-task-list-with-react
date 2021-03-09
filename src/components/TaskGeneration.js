@@ -48,8 +48,8 @@ const TaskGeneration = ({ cat }) => {
                         onClick={() => handleCompleted(task.id)}
                     >
                         {task.title}
-                        {task.text && <span style={{ color: "grey", fontSize: "calc(7px + 2vmin)" }}> ...</span>}
-                        {task.detail && <p style={{ color: "grey", fontSize: "calc(7px + 2vmin)" }}>{task.text}</p>}
+                        {task.text && <span style={{ color: "#fff", fontSize: "calc(7px + 2vmin)" }}> ...</span>}
+                        {task.detail && <p style={{ color: "#c8c6a7", fontSize: "calc(7px + 2vmin)" }}>{task.text}</p>}
 
                     </li>
                     <p onClick={() => handleDetail(task.id)} className="formButton " style={{ minWidth: "3vw", padding: '1vw', margin: "1vh", backgroundColor: "#f0c929", color: "whitesmoke" }} > ...  </p>

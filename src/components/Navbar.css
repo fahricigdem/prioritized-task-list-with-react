@@ -15,10 +15,11 @@
 }
 
 .navButton {
-    background-color: rgba(245, 245, 245); 
+    background-color: grey;
     border: none;
-    color:rgba(0, 0, 0, 0.74);
+    /* color:rgba(0, 0, 0, 0.74); */
     /* font-size: x-large; */
+    color: antiquewhite;
     padding: 5px 3px;
     text-align: center;
     text-decoration: none;
@@ -31,7 +32,7 @@
 
   .navHome{
     width: 40vw;
-    background-color:red;
+    background-color:grey;
     font-size: xx-large;
     color: antiquewhite;
   }
