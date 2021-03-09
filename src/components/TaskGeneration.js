@@ -52,8 +52,8 @@ const TaskGeneration = ({ cat }) => {
                         {task.detail && <p style={{ color: "grey", fontSize: "calc(7px + 2vmin)" }}>{task.text}</p>}
 
                     </li>
-                    <p onClick={() => handleDetail(task.id)} className="formButton " style={{ minWidth: "3vw", padding: '1vw', margin: "0vh", backgroundColor: "#f0c929", color: "whitesmoke" }} > detail  </p>
-                    <p onClick={() => handleDelete(task.id)} className="formButton " style={{ minWidth: "3vw", padding: '1vw', margin: "0vh", backgroundColor: "#ec5858", color: "whitesmoke" }} > del  </p>
+                    <p onClick={() => handleDetail(task.id)} className="formButton " style={{ minWidth: "3vw", padding: '1vw', margin: "1vh", backgroundColor: "#f0c929", color: "whitesmoke" }} > ...  </p>
+                    <p onClick={() => handleDelete(task.id)} className="formButton " style={{ minWidth: "3vw", padding: '1vw', margin: "1vh", backgroundColor: "#ec5858", color: "whitesmoke" }} > x  </p>
 
                 </div>
             )
