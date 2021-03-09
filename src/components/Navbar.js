@@ -21,7 +21,8 @@ const Navbar = () => {
                 <h1 className="navButton">All : {tasks.length}</h1>
             </Link>
 
-            <div className="badge badge-danger">Done : {completed} </div>
+
+            {completed ? <div className="badge badge-danger">Done : {completed} </div> : <div className="badge badge-info">Done : {completed} </div>}
 
         </nav>
     )
