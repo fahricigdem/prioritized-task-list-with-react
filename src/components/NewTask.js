@@ -56,7 +56,7 @@ const NewTask = () => {
         setTasks(newTasks)
         setLastId(lastId + 1)
         setTitle("")
-        setText("details...")
+        setText("")
         setIsUrgent(false)
         setIsImportant(false)
     }
