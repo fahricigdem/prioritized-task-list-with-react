@@ -4,40 +4,51 @@ import { TaskContext } from './TaskContext'
 import TaskListLinkButtons from "./TaskListLinkButtons"
 
 const NewTask = () => {
+    //Includes a form to add a new task and link buttons for task lists
 
+    //Get "tasks" data and last ID data for unique id from Context Component
     const { value1, value2 } = useContext(TaskContext);
     const [tasks, setTasks] = value1
     const [lastId, setLastId] = value2
 
+    //Task Title, Task Text(detail) and categorie data
     const [title, setTitle] = useState("")
     const [text, setText] = useState("")
     const [categorie, setCategorie] = useState(null)
 
+    //For determining categorie of a task
     const [isUrgent, setIsUrgent] = useState(false)
     const [isImportant, setIsImportant] = useState(false)
 
+    //When the Important or Urgent button is clicked, they change to a different color.
     let buttonStyleUrgent = isUrgent ? "formButton  urgent " : "formButton "
     let buttonStyleImportant = isImportant ? "formButton  important" : "formButton "
 
     const handleIsUrgent = () => {
+        //When the Urgent button is clicked, the isUrgent variable is updated.
         setIsUrgent(!isUrgent)
     }
 
     const handleIsImportant = () => {
+        //When the Important button is clicked, the isImportant variable is updated.
         setIsImportant(!isImportant)
     }
 
     useEffect(() => {
+        // When the isUrgent and isImportant variables are updated, the category of the task is determined 
+        // Nu.1 is for Urgent&Important, 2 for not Urgent but Important,3 for Urgen but not Important and 4 for neither Urgent nor Important).
         isUrgent && isImportant ? setCategorie(1) :
             !isUrgent && isImportant ? setCategorie(2) :
                 isUrgent && !isImportant ? setCategorie(3) : setCategorie(4)
     }, [isUrgent, isImportant])
 
     const handleTitle = (e) => {
+        //Title of new Task
         setTitle(e.target.value)
     }
 
     const handleText = (e) => {
+        //Detail Text of new Task
         setText(e.target.value)
     }
 
@@ -50,19 +61,20 @@ const NewTask = () => {
             text: text,
             categorie: categorie,
             completed: false,
-            detail: false
+            detail: false  // It becomes true with the "..." button in the task list and detailed information is displayed.
         }]
 
         setTasks(newTasks)
-        setLastId(lastId + 1)
+
+        setLastId(lastId + 1) //For unique id, the lastID in the context component is updated
+        //Resets all input fields in new Task Form
         setTitle("")
         setText("")
         setIsUrgent(false)
         setIsImportant(false)
     }
 
-    // console.log(tasks[tasks.length - 1])
-
+    // includes a new Task Form and Task List links for 4 categorie
     return (
         <div className="formContainer"  >
 

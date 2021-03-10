@@ -2,11 +2,12 @@ import React, { useContext } from 'react';
 import { TaskContext } from './TaskContext'
 
 const TaskGeneration = ({ cat }) => {
-
+    //Get data from Context 
     const { value1 } = useContext(TaskContext);
     const [tasks, setTasks] = value1
 
     const handleDetail = (id) => {
+        //The detail boolean variable of the related task object is changed.
         setTasks(
             [...tasks].map(task => {
                 if (task.id === id) {
@@ -17,7 +18,7 @@ const TaskGeneration = ({ cat }) => {
         )
     }
     const handleCompleted = (id) => {
-
+        //Clicking on a task (li tag) in the task list will change its completed info.
         setTasks(
             [...tasks].map(task => {
                 if (task.id === id) {
@@ -29,17 +30,24 @@ const TaskGeneration = ({ cat }) => {
     }
 
     const handleDelete = (id) => {
+        //Clicking on a "x" button in the task list will change task list for deleting related task
         setTasks(
             [...tasks].filter(task => task.id !== id)
         )
     }
 
     const data = tasks.map(task => {
+        //A task list is created inside the ul tag.
 
         if (task.categorie === cat || cat === 5) {
+            //cat variable is obtained as props from TaskList Component
+            //Tasks with the relevant category value are generated for 'data object'
             let style
-            style = task.completed && "checked"
+            style = task.completed && "checked"   // If the checked value of the related task is true, the style is changed.
 
+            // There are li tag and 2 buttons inside the taskrow, "..." and "x"
+            // If detailed information is available, "..." is shown next to the task name. 
+            // If the detail value of the object is true, the detail is shown below.
             return (
                 <div className="taskrow">
                     <li
