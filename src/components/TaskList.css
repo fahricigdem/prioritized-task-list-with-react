@@ -47,7 +47,7 @@
   
   /* Darker background-color on hover */
   ul li:hover {
-    background: #ddd;
+    background: #777;
   }
   
   /* When clicked on, add a background color and strike out text */
