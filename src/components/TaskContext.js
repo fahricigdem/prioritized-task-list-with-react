@@ -32,7 +32,7 @@ export const TaskProvider = (props) => {
             localStorage.setItem("lastId", JSON.stringify(10000))
 
         } else {
-            //If local data is available, it is assigned to component sources : tasks and lastId
+            //If local data is available, get the data.
             let tasksLocal = JSON.parse(localStorage.getItem("tasks"))
             let lastIdLocal = JSON.parse(localStorage.getItem("lastId"))
 

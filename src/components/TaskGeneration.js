@@ -7,7 +7,7 @@ const TaskGeneration = ({ cat }) => {
     const [tasks, setTasks] = value1
 
     const handleDetail = (id) => {
-        //The detail boolean variable of the related task object is changed.
+        //The detail (boolean) is changed.
         setTasks(
             [...tasks].map(task => {
                 if (task.id === id) {
@@ -30,7 +30,7 @@ const TaskGeneration = ({ cat }) => {
     }
 
     const handleDelete = (id) => {
-        //Clicking on a "x" button in the task list will change task list for deleting related task
+        //Clicking on a "x" button will filter tasks-object-array.
         setTasks(
             [...tasks].filter(task => task.id !== id)
         )

@@ -36,7 +36,7 @@ const NewTask = () => {
 
     useEffect(() => {
         // When the isUrgent and isImportant variables are updated, the category of the task is determined 
-        // Nu.1 is for Urgent&Important, 2 for not Urgent but Important,3 for Urgen but not Important and 4 for neither Urgent nor Important).
+        // Categorie 1 is Urgent&Important, 2 is not Urgent but Important, and so on...
         isUrgent && isImportant ? setCategorie(1) :
             !isUrgent && isImportant ? setCategorie(2) :
                 isUrgent && !isImportant ? setCategorie(3) : setCategorie(4)
