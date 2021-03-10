@@ -10,13 +10,8 @@ const HomePage = () => {
     const { value1 } = useContext(TaskContext);
     const [tasks] = value1
 
-    //Calculate how many tasks in which category  
-    let UrgentImp = 0
-    let notUrgentImp = 0
-    let UrgentNotImp = 0
-    let notUrgentNotImp = 0
-
-    // Nu.1 is for Urgent&Important, 2 for not Urgent but Important,3 for Urgen but not Important and 4 for neither Urgent nor Important).
+    //Calculate the number of categories. Categorie 1 is Urgent&Important and so on...
+    let UrgentImp = 0, notUrgentImp = 0, UrgentNotImp = 0, notUrgentNotImp = 0
     tasks.map(task => {
         task.categorie === 1 && UrgentImp++
         task.categorie === 2 && notUrgentImp++
