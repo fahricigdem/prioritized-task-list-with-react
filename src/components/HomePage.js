@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import './HomePage.css'
 import { Link } from 'react-router-dom';
-import { TaskContext } from './TaskContext'
-import TaskListLink from "./TaskListLink"
+import { TaskContext } from './TaskContext' // Data Source
+import TaskListLink from "./TaskListLink"  // Tasklist Buttons (for Homepage)
 
 const HomePage = () => {
 

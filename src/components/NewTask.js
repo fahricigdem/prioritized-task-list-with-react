@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './NewTask.css';
-import { TaskContext } from './TaskContext'
-import TaskListLinkButtons from "./TaskListLinkButtons"
+import { TaskContext } from './TaskContext' // Data Source
+import TaskListLinkButtons from "./TaskListLinkButtons" // Tasklist Buttons (for New Task Component)
 
 const NewTask = () => {
     //Includes a form to add a new task and link buttons for task lists

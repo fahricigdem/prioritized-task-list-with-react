@@ -3,6 +3,7 @@ import { TaskContext } from './TaskContext'
 import { Link } from 'react-router-dom'
 
 const TaskListLinkButtons = () => {
+    //Task List linkbuttons are genereted for NewTask and Tasklist components
 
     const { value1 } = useContext(TaskContext);
     const [tasks] = value1
@@ -21,21 +22,6 @@ const TaskListLinkButtons = () => {
     })
 
     return (
-        // <div className="buttonContainer">
-        //     <Link to="/prioritized-task-list-with-react/1" style={{ textDecoration: 'none' }} >
-        //         <div className="formButton link" style={{ backgroundColor: "#99CC00" }}>Urgent & Important : {UrgentImp}</div>
-        //     </Link>
-        //     <Link to="/prioritized-task-list-with-react/2" style={{ textDecoration: 'none' }} >
-        //         <div className="formButton link" style={{ backgroundColor: "#36A4DD" }}>Important : {notUrgentImp}</div>
-        //     </Link>
-        //     <Link to="/prioritized-task-list-with-react/3" style={{ textDecoration: 'none' }} >
-        //         <div className="formButton link" style={{ backgroundColor: "#FF9F00" }}>Urgent : {UrgentNotImp}</div>
-        //     </Link>
-        //     <Link to="/prioritized-task-list-with-react/4" style={{ textDecoration: 'none' }} >
-        //         <div className="formButton link" style={{ backgroundColor: "#FF4D4E" }}>others : {notUrgentNotImp}</div>
-        //     </Link>
-
-        // </div>
 
         <div className="buttonContainer">
             <Link to="/prioritized-task-list-with-react/1" style={{ textDecoration: 'none' }} >

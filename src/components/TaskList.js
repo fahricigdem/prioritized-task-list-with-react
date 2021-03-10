@@ -1,15 +1,18 @@
 import React from 'react';
 import './TaskList.css';
-import TaskGeneration from './TaskGeneration'
-import TaskListLinkButtons from "./TaskListLinkButtons"
+import TaskGeneration from './TaskGeneration' // Used for the production of Tasklist
+import TaskListLinkButtons from "./TaskListLinkButtons" // Tasklist Buttons (for TaskList)
 import { Link } from 'react-router-dom'
 
+//match is used for determining the categorie 
 const TaskList = ({ match }) => {
 
     let categorie = Number(match.params.cat)
 
     let style = { color: "#d8c292", fontSize: "calc(15px + 2vmin)" }
 
+    //Tasklist title is written according to categorie
+    //Tasklist is genereted with TaskGeneration component
     return (
         <div className="taskListContainer">
 
