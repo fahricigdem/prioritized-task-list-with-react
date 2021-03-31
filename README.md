@@ -1,3 +1,6 @@
+try it and use it on your smartphone as pwa...
+the App records your Tasks on your local device. Even after refreshing the records stay. 
+
 # https://fahricigdem.github.io/prioritized-task-list-with-react/
 
 <center>
